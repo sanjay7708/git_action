@@ -3,7 +3,12 @@ from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework import status
 from django.contrib.auth import login,authenticate,logout
+from django.http import HttpResponse
 # Create your views here.
+
+
+def home(request):
+    return HttpResponse('welcome')
 
 class LoginView(APIView):
     def post(self,request):
