@@ -11,7 +11,7 @@ class sampltest(TestCase):
     def test_home(self):
         res=self.client.get(self.home)
         
-        self.assertEqual(res.content.decode(),'welcom')
+        self.assertEqual(res.content.decode(),'welco')
 class mytest(APITestCase):
     def setUp(self):
         self.user=User.objects.create_user(
